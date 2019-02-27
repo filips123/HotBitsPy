@@ -79,6 +79,7 @@ class RandomDataGenerator:
 
         except (NameError, KeyError):
             # pylint: disable=E1101
+            # pylint: disable=R1720
 
             if isinstance(error, HTTPError):
                 if error.code == 400:
@@ -94,4 +95,5 @@ class RandomDataGenerator:
 
             raise ValueError('Can\'t get result because of wrong request or API error')
 
+            # pylint: enable=R1720
             # pylint: enable=E1101
