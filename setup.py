@@ -6,11 +6,13 @@ def readme():
 
 setup(
     name = 'hotbits',
-    version = '1.0.0',
     description = 'Python API for HotBits random data generator',
     long_description = readme(),
     long_description_content_type='text/markdown',
     license = 'GPLv3+',
+
+    version_format='{tag}',
+    setup_requires=['setuptools-git-version'],
 
     packages = ['hotbits'],
 
